@@ -1,0 +1,158 @@
+/* products - flex container -parent element */
+#products {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  /* align-items: center;      */
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.prmain-container {
+  width: 97%;
+  height: calc(100% - 170px);
+}
+
+/*Vidi kaj marginot*/
+#pmaintitle {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto -10px auto;
+  box-sizing: border-box;
+}
+
+/*Vidi kaj marginot*/
+
+#editbtn {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid lightgray;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+#delbtn {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.tit {
+  display: flex;
+  align-items: center;
+  padding-right: 200px;
+}
+
+#filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  flex-direction: row;
+}
+
+#pmaintitle h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+}
+
+#pmaintitle h2 {
+  font-size: 16px;
+  color: #575757;
+}
+
+#pmaintitle select {
+  height: 35px;
+  width: 170px;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #8d8d8d;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  outline: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+/* select:focus */
+#pmaintitle option:focus {
+  /* background-color: #fff; */
+  /* outline: none; */
+  /* border: none;
+  box-shadow: none; */
+  border: 0px;
+  outline: 0px;
+}
+
+#pmaintable {
+  width: 90%;
+  border: 0px;
+  border-spacing: 0px 10px;
+  margin: 0 auto 0px;
+}
+
+#pmaintable thead th {
+  font-size: 16px;
+  color: #404040;
+  padding: 0px 5px 5px 20px;
+  border-bottom: 1px solid #707070;
+  width: 180px;
+  height: 50px;
+  text-align: left;
+}
+
+#pmaintable tbody tr {
+  font-size: 16px;
+  color: #575757;
+  background-color: #fff;
+}
+
+#pmaintable tbody td {
+  width: 180px;
+  height: 50px;
+  padding: 5px 20px 5px 20px;
+  text-align: left;
+}
+
+#pmaintable tbody td span i {
+  padding-left: 15px;
+  /* text-align: center; */
+}
+
+/* #row {
+    display: flex;
+    flex-direction: row;
+} */
+
+#mainonebtn #btnnewproduct {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  /* font-weight: 600; */
+  width: 180px;
+  height: 45px;
+  background-color: #6d6d6d;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+{
+  "db": {
+    "host": "cluster0-3tbei.mongodb.net",
+    "dbname": "pro",
+    "username": "dev",
+    "password": "DEV123!"
+  },
+  "mailer": {
+    "key": ""
+  },
+  "jwt": {
+    "key": "kluch"
+  }
+}

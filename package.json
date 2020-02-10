@@ -1,0 +1,35 @@
+{
+  "name": "my-final-pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr0pellerhead/node-mongo.git"
+  },
+  "author": "DPavlov80",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pr0pellerhead/node-mongo/issues"
+  },
+  "homepage": "https://github.com/pr0pellerhead/node-mongo#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-jwt": "^5.3.1",
+    "http-proxy": "^1.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.8",
+    "node-input-validator": "^4.1.0",
+    "randomstring": "^1.1.5",
+    "react-router-dom": "^5.1.2"
+  }
+}
