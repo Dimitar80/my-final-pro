@@ -18,7 +18,7 @@ class Navbar extends React.Component {
       delShow: false
     };
   }
-
+  //TESTS//
   showProducts = () => {
     this.setState({
       toggle: false
