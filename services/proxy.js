@@ -1,6 +1,7 @@
 const express = require("express");
 const proxy = require("http-proxy");
 
+//initialize//
 var api = express();
 var apiProxy = proxy.createProxyServer();
 
@@ -13,8 +14,12 @@ api.all("/api/v1/products/*", (req, res) => {
 });
 
 api.all("/*", (req, res) => {
-  res.status(400).send("not found");
+  apiProxy.web(req, res, { target: "http://localhost:8083" });
 });
+
+// api.all("/*", (req, res) => {
+//   res.status(400).send("not found");
+// });
 
 api.listen(process.env.PORT, err => {
   if (err) {

@@ -1,13 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const products = require("../handlers/products");
 const jwt = require("express-jwt");
 
+//making the connection with mongoose
 const config = require("../config/index.js");
 const DBConn = require("../db/connection");
-const products = require("../handlers/products");
-const cors = require("cors");
-
 DBConn.init(config.getConfig("db"));
+
+const cors = require("cors");
 
 const api = express();
 api.use(bodyParser.json());

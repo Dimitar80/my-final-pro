@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,8 +14,9 @@
   "author": "DPavlov80",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pr0pellerhead/node-mongo/issues"
+    "url": "https://github.com/Dimitar80/my-final-pro/issues"
   },
+  "homepage": "https://github.com/Dimitar80/my-final-pro",
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "axios": "^0.19.2",
