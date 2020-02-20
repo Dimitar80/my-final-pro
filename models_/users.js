@@ -54,6 +54,18 @@ const getUserPasswordByEmail = email => {
   });
 };
 
+const getAllUsers = (/*q, sort*/) => {
+  return new Promise((success, fail) => {
+    User.find({}, (err, data) => {
+      if (err) {
+        // console.log(err)
+        return fail(err);
+      }
+      return success(data);
+    });
+  });
+};
+
 const getOne = (id /*userID*/) => {
   return new Promise((success, fail) => {
     User.find({ _id: id /*user_id: userID*/ }, (err, data) => {
@@ -114,6 +126,7 @@ const confirmUserAccount = hash => {
 module.exports = {
   createUser,
   getUserPasswordByEmail,
+  getAllUsers,
   getOne,
   remove,
   replaceUser,

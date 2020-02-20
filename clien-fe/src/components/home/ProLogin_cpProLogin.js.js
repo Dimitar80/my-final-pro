@@ -4,7 +4,7 @@ import "../../assets/styles/shared.css";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 
-class ProLogin extends React.Component {
+class ProLogin_cpProLogin extends React.Component {
   constructor(/*props*/) {
     super(/*props*/);
     this.state = {
@@ -27,7 +27,19 @@ class ProLogin extends React.Component {
       .get("http://127.0.0.1:8081/api/v1/auth/userslist")
       .then(res => {
         this.setState({ userlist: res.data /*loading: false*/ }, () => {
-          console.log(this.state.userlist);
+          // console.log(this.state.userlist[0].email);
+          // let userEmail = 0;
+          // for (let i = 0; i < this.state.userlist.length; i++) {
+          //   userEmail = this.state.userlist[i].email;
+          //   console.log(userEmail);
+          // }
+          // const arrEmails = [];
+          // for (let i = 0; i < this.state.userlist.length; i++) {
+          //   arrEmails.push(this.state.userlist[i].email);
+          //   this.setState({ extUserEmails: arrEmails });
+          //   // console.log(this.state.userlist[i].password);
+          // }
+          // console.log(arrEmails);
         });
       })
       .catch(err => {
@@ -44,43 +56,39 @@ class ProLogin extends React.Component {
 
   saveInputValue = event => {
     this.setState({ [event.target.id]: event.target.value });
-    // console.log(event.target.id);
-    // console.log(event.target.value);
+    console.log(event.target.id);
+    console.log(event.target.value);
   };
 
-  logIn = (/*event*/) => {
+  //   if(fruits.indexOf("Mango") !== -1){
+  //     alert("Value exists!")
+  // } else{
+  //     alert("Value does not exists!")
+  // }
+
+  logIn = event => {
     // event.preventDefault();
-    for (let e = 0; e < this.state.userlist.length; e++) {
-      if (this.state.userlist[e].email !== this.state.email) {
-        // console.log("Existing user email - " + this.state.userlist[e].email);
-        // console.log("Entered email - " + this.state.email);
-        this.setState({
-          error: "Your e-mail is incorrect. Try again !",
-          exsUserData: null
-        });
-      }
-      // if (this.state.userlist[e].password === this.state.password) {
-      //   console.log(this.state.userlist[e].password);
-      //   console.log(this.state.password);
-      // } else {
-      //   console.log("Wrong Password!, try again");
-      // }
-    }
+
     if (
       this.state.email === "" ||
       this.state.password === "" ||
       this.state.email === null ||
       this.state.password === null
     ) {
+      // this.setState({ email: null, password: "" });//
       this.setState({
         exsUserData: "Both fields must be filled out to Sign In!",
         error: null
       });
       // event.preventDefault();
       console.log(this.state.exsUserData);
-    } else if (
+      // alert("All fields must be filled out to SignIn!");
+    }
+    // for(let e = 0; e < this.state.userlist.length; e++){
+    //   if(this.state.userlist[i].email == this.state.email)
+    // }
+    else if (
       this.state.email !== "" &&
-      // this.state.userlist[e].email !== this.state.email &&
       this.state.password !== ""
       // this.state.email != null
       // this.state.password != null
@@ -91,6 +99,7 @@ class ProLogin extends React.Component {
           password: this.state.password
         })
         .then(res => {
+          // this.setState({ datite: res.data });
           localStorage.setItem("jwt", res.data.jwt);
           localStorage.setItem("email", res.data.email);
           localStorage.setItem("firstName", res.data.first_name);
@@ -99,12 +108,15 @@ class ProLogin extends React.Component {
           this.setState({ redirect: true });
         })
         .catch(err => {
-          console.log(err);
+          console.log(
+            err
+            // alert("Your e-mail or password is incorrect. Try again")
+          );
           this.setState({
             error: "Your e-mail/password is incorrect. Try again !",
             exsUserData: null
           });
-          // console.log(this.state.error);
+          console.log(this.state.error);
         });
     }
   };
@@ -119,6 +131,13 @@ class ProLogin extends React.Component {
     if (redirect) {
       return <Redirect to="/products" />;
     }
+    // console.log(this.logIn(err.data));
+    // console.log(this.state.exsUserData);
+    // console.log(this.state.error);
+    // console.log(this.state.datite);
+    // console.log(this.state.userlist);
+    // console.log(this.state.extUserEmails);
+    // console.log(this.userEmail);
 
     return (
       <React.Fragment>
@@ -190,4 +209,4 @@ class ProLogin extends React.Component {
   }
 }
 
-export default ProLogin;
+export default ProLogin_cpProLogin;

@@ -62,34 +62,32 @@ class DeleteUser extends React.Component {
     console.log(userFullName);
 
     return (
-      <div id="delproducts">
-        <div id="back-screen">
-          <div id="delbox">
-            <div id="boxtext">
-              <h2>Delete User</h2>
-              <p>
-                You are about to delete this User Account with all files created
-                by this user -{" "}
-                <span style={{ fontWeight: "900", fontSize: "18px" }}>
-                  {userFullName}
-                </span>
-                <br />
-                Are you sure you want to continue?
-              </p>
-            </div>
-            <div id="delBox-buttons">
-              <button id="cancel" onClick={this.props.clDelUser}>
-                CANCEL
-              </button>
-              <button
-                id="delete"
-                /*onClick={() => this.props.delRow(id)}*/ onClick={
-                  this.delDocsAndUser
-                }
-              >
-                DELETE
-              </button>
-            </div>
+      <div id="du-back-screen">
+        <div id="user-delbox">
+          <div id="user-boxtext">
+            <h2>Delete User</h2>
+            <p>
+              You are about to delete this User Account with all files created
+              by this user -{" "}
+              <span style={{ fontWeight: "900", fontSize: "18px" }}>
+                {userFullName}
+              </span>
+              <br />
+              Are you sure you want to continue?
+            </p>
+          </div>
+          <div id="delBox-buttons">
+            <button id="cancel" onClick={this.props.clDelUser}>
+              CANCEL
+            </button>
+            <button
+              id="delete"
+              /*onClick={() => this.props.delRow(id)}*/ onClick={
+                this.delDocsAndUser
+              }
+            >
+              DELETE
+            </button>
           </div>
         </div>
       </div>

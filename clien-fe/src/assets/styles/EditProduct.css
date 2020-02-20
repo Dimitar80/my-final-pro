@@ -33,21 +33,55 @@
 }
 
 .epform-container {
-  display: flex;
+  display: inline-flex;
+  /* flex-wrap: wrap; */
   align-items: center; /* check*/
   justify-content: center; /*check*/
-  flex-wrap: wrap;
   width: 73%;
   height: 650px;
   margin: 0 auto 40px 5%;
   box-sizing: border-box;
   overflow-x: hidden;
-  /* height: 450px; */
-  /* padding: 40px 120px 40px 40px; */
+  background-color: red;
+  /* clear: both; */
+}
+
+/* .epform-container > * {
+  flex: 1 0 300px;
+} */
+
+@media screen and (max-width: 600px) {
+  .epform-container {
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    height: 1300px;
+    width: 73%;
+    clear: both;
+    align-items: flex-start;
+    /* flex-flow: row wrap; */
+  }
+  .eptextfield {
+    width: 100%;
+    /* flex: 0 0 66.66667%;
+    max-width: 66.66667%; */
+  }
+  /* #epfpage {
+    flex-flow: row wrap;
+  } */
+  #epfpage {
+    /* display: flex; */
+    width: 100%;
+  }
+  #ep-right-page {
+    width: 100%;
+  }
 }
 
 #epfpage {
   display: flex;
+  flex-flow: row wrap;
+  float: left;
   align-items: center;
   justify-content: flex-start; /*flex-start*/
   width: 53%;
@@ -69,8 +103,12 @@
   display: inline-block;
 }
 
+/* input {
+  display: block;
+} */
 .eptextfield {
   /* width: 100%; */
+  /* flex: 0 1 100%; */
   width: 370px;
   height: 35px;
   font-size: 15px;

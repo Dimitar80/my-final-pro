@@ -9,7 +9,7 @@ class UpdateUser extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      edata: [],
+      usdata: [],
       first_name: null,
       last_name: null,
       email: null,
@@ -37,7 +37,7 @@ class UpdateUser extends React.Component {
       .then(res => {
         const ep = res.data;
         // console.log(ep);
-        this.setState({ edata: ep, loading: false });
+        this.setState({ usdata: ep, loading: false });
       })
       .catch(error => {
         this.setState({ loading: false });
@@ -75,15 +75,16 @@ class UpdateUser extends React.Component {
           "http://127.0.0.1:8081/api/v1/auth/" +
             /*this.state.edata[0]._id*/ this.props.match.params.id,
           {
-            first_name: this.state.first_name || this.state.edata[0].first_name,
-            last_name: this.state.last_name || this.state.edata[0].last_name,
-            email: this.state.email || this.state.edata[0].email,
+            first_name:
+              this.state.first_name || this.state.usdata[0].first_name,
+            last_name: this.state.last_name || this.state.usdata[0].last_name,
+            email: this.state.email || this.state.usdata[0].email,
             // password: this.state.password || this.state.edata[0].password,
             date_of_birth:
               this.state.date_of_birth /*.toString()*/ ||
-              this.state.edata[0].date_of_birth /*.slice(0, 10)*/,
-            telephone: this.state.telephone || this.state.edata[0].telephone,
-            country: this.state.country || this.state.edata[0].country,
+              this.state.usdata[0].date_of_birth /*.slice(0, 10)*/,
+            telephone: this.state.telephone || this.state.usdata[0].telephone,
+            country: this.state.country || this.state.usdata[0].country,
             _modified: new Date()
           },
           {
@@ -133,70 +134,70 @@ class UpdateUser extends React.Component {
             </div>
             <div className="user-form-container">
               <div id="user-fpage">
-                {this.state.edata.length > 0 ? (
+                {this.state.usdata.length > 0 ? (
                   <div>
                     <p className="input-container">
-                      <label className="eplabel">First Name</label>
+                      <label className="eu-label">First Name</label>
                       <input
                         type="text"
-                        className="eptextfield"
+                        className="eu-textfield"
                         id="first_name"
                         onChange={this.saveInputValue}
-                        defaultValue={this.state.edata[0].first_name}
+                        defaultValue={this.state.usdata[0].first_name}
                       />
                     </p>
                     <p className="input-container">
-                      <label className="eplabel">Last Name</label>
+                      <label className="eu-label">Last Name</label>
                       <input
                         type="text"
-                        className="eptextfield"
+                        className="eu-textfield"
                         id="last_name"
                         onChange={this.saveInputValue}
-                        defaultValue={this.state.edata[0].last_name}
+                        defaultValue={this.state.usdata[0].last_name}
                       />
                     </p>
                     <p className="input-container">
-                      <label className="eplabel">E-mail</label>
+                      <label className="eu-label">E-mail</label>
                       <input
                         type="text"
-                        className="eptextfield"
+                        className="eu-textfield"
                         id="email"
                         onChange={this.saveInputValue}
-                        defaultValue={this.state.edata[0].email}
+                        defaultValue={this.state.usdata[0].email}
                       />
                     </p>
                     <p className="input-container">
-                      <label className="eplabel">Date of Birth</label>
+                      <label className="eu-label">Date of Birth</label>
                       <input
                         type="date"
                         max="2999-12-31"
-                        className="eptextfield"
+                        className="eu-textfield"
                         id="date_of_birth"
                         onChange={this.saveInputValue}
-                        defaultValue={this.state.edata[0].date_of_birth.slice(
+                        defaultValue={this.state.usdata[0].date_of_birth.slice(
                           0,
                           10
                         )}
                       />
                     </p>
                     <p className="input-container">
-                      <label className="eplabel">Telephone</label>
+                      <label className="eu-label">Telephone</label>
                       <input
                         type="text"
-                        className="eptextfield"
+                        className="eu-textfield"
                         id="telephone"
                         onChange={this.saveInputValue}
-                        defaultValue={this.state.edata[0].telephone}
+                        defaultValue={this.state.usdata[0].telephone}
                       />
                     </p>
                     <p className="input-container">
-                      <label className="eplabel">Country</label>
+                      <label className="eu-label">Country</label>
                       <input
                         type="text"
-                        className="eptextfield"
+                        className="eu-textfield"
                         id="country"
                         onChange={this.saveInputValue}
-                        defaultValue={this.state.edata[0].country}
+                        defaultValue={this.state.usdata[0].country}
                       />
                     </p>
                     <div id="btnsEp">
@@ -234,8 +235,8 @@ class UpdateUser extends React.Component {
         {this.state.deleteShow ? (
           <DeleteUser
             clDelUser={this.delOf}
-            userId={this.state.edata[0]._id}
-            fullName={`${this.state.edata[0].first_name} ${this.state.edata[0].last_name}`}
+            userId={this.state.usdata[0]._id}
+            fullName={`${this.state.usdata[0].first_name} ${this.state.usdata[0].last_name}`}
           />
         ) : null}
       </React.Fragment>

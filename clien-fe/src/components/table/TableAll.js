@@ -54,7 +54,11 @@ class TableAll extends React.Component {
       // this.state.udata.length > 0 ?
       <React.Fragment>
         {/* <div className="products-table-container"> */}
-        <table id="emaintable">
+        <table
+          /*id="emaintable"*/ className={
+            this.props.showEdDel ? "pmaintable" : "emaintable"
+          }
+        >
           <thead className="products-table-head">
             <tr>
               <th>Product Name</th>

@@ -60,7 +60,7 @@
   overflow-x: hidden;
 }
 
-.eplabel {
+.eu-label {
   width: 100%;
   font-size: 18px;
   color: #8d8d8d;
@@ -69,7 +69,7 @@
   display: inline-block;
 }
 
-.eptextfield {
+.eu-textfield {
   /* width: 100%; */
   width: 370px;
   height: 35px;

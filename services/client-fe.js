@@ -1,11 +1,15 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const cors = require("cors");
 const api = express();
 
-const path = require("path");
-
-const cors = require("cors");
+api.use(cors());
+const api = express();
+api.use(bodyParser.json());
 api.use(cors());
 
+// Serve build version-static files from the React app
 api.use(express.static(path.join(__dirname, "../client-fe/build")));
 
 api.get("/*", function(req, res) {

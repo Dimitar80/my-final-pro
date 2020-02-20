@@ -127,51 +127,23 @@ const register = (req, res) => {
     });
 };
 
-// const login = (req, res) => {
-//   mUsers
-//     .getUserPasswordByEmail(req.body.email)
-//     .then(data => {
-//       bcrypt.compare(req.body.password, data.password, function(err, rez) {
-//         if (err) {
-//           return res.status(500).send("Could not compare password");
-//         }
-//         if (rez) {
-//           var tokenData = {
-//             id: data._id,
-//             full_name: `${data.first_name} ${data.last_name}`,
-//             email: data.email
-//             // exp:
-//           };
-//           var token = jwt.sign(tokenData, config.getConfig("jwt").key);
-//           return res.status(200).send({
-//             jwt: token,
-//             first_name: data.first_name,
-//             last_name: data.last_name
-//           });
-//         }
-//         return res.status(404).send("not found");
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       return res.status(500).send("Could not get user");
-//     });
-// };
-
 const login = (req, res) => {
   mUsers
     .getUserPasswordByEmail(req.body.email)
     .then(data => {
       bcrypt.compare(req.body.password, data.password, (err, rez) => {
+        console.log(req.body.password + "-VS-" + data.password);
         if (err) {
           return res.status(500).send("Could not compare passwords");
         }
+        console.log(err, "Wrong Password!");
         if (rez) {
           var tokenData = {
             id: data._id,
             full_name: `${data.first_name} ${data.last_name}`,
             email: data.email
           };
+          console.log(err, "Correct Password!");
           var token = jwt.sign(tokenData, config.getConfig("jwt").key);
           return res.status(200).send({
             jwt: token,
@@ -198,6 +170,19 @@ const confirm = (req, res) => {
     })
     .catch(err => {
       return res.status(500).send("internal Server Error");
+    });
+};
+
+const getAllUsersList = (req, res) => {
+  mUsers
+    .getAllUsers(/*q, sort*/)
+    .then(data => {
+      res.status(200).send(data);
+      // console.log(data);
+    })
+    .catch(err => {
+      res.status(500).send(err);
+      console.log(err);
     });
 };
 
@@ -287,6 +272,7 @@ const changePassword = (req, res) => {
 module.exports = {
   register,
   login,
+  getAllUsersList,
   getOne,
   replaceUser,
   removeUser,

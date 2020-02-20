@@ -362,12 +362,13 @@ class Expenses extends React.Component {
                 </button>
               </div>
               {this.state.toggle ? (
-                <p id="years">
+                <div id="Yearly-cont">
+                  {/* <p id="years"> */}
                   <label>Choose Year</label>
                   <select
                     /*name="expenses-filter"*/
                     id="mySelectYears"
-                    className="ex-select"
+                    className="ex-select-year"
                     onChange={this.selectYValue}
                     value={this.state.yearValue}
                   >
@@ -379,43 +380,50 @@ class Expenses extends React.Component {
                       </option>
                     ))}
                   </select>
-                </p>
+                  {/* </p> */}
+                </div>
               ) : (
-                <p id="years">
+                <div id="Monthly-cont">
+                  {/* <p id="years"> */}
                   {/* <h2>Choose Month</h2> */}
-                  <label>Choose Month</label>
-                  <select
-                    /*name="expenses-filter" */
-                    id="mySelectMonths"
-                    className="ex-select"
-                    onChange={e => this.selectMValue(e, true)}
-                    value={this.state.monthValue}
-                  >
-                    {monthsList.map((month, i) => (
-                      // console.log(i, month),
-                      <option key={month} value={i}>
-                        {month}
-                      </option>
-                    ))}
-                  </select>
+                  <div id="ch-month">
+                    <label>Choose Month</label>
+                    <select
+                      /*name="expenses-filter" */
+                      id="mySelectMonths"
+                      className="ex-select"
+                      onChange={e => this.selectMValue(e, true)}
+                      value={this.state.monthValue}
+                    >
+                      {monthsList.map((month, i) => (
+                        // console.log(i, month),
+                        <option key={month} value={i}>
+                          {month}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                   {/* <h2>Choose Year</h2> */}
-                  <label>Choose Year</label>
-                  <select
-                    /*name="expenses-filter" */
-                    id="mySelectYears"
-                    className="ex-select"
-                    onChange={e => this.selectMValue(e, false)}
-                    value={this.state.yearValue}
-                  >
-                    <option value="Years">Years</option>
-                    {uniqueUserYears.map((year, i) => (
-                      // console.log(i, year),
-                      <option key={year} value={year}>
-                        {year}
-                      </option>
-                    ))}
-                  </select>
-                </p>
+                  <div id="ch-year">
+                    <label>Choose Year</label>
+                    <select
+                      /*name="expenses-filter" */
+                      id="mySelectYears"
+                      className="ex-select"
+                      onChange={e => this.selectMValue(e, false)}
+                      value={this.state.yearValue}
+                    >
+                      <option value="Years">Years</option>
+                      {uniqueUserYears.map((year, i) => (
+                        // console.log(i, year),
+                        <option key={year} value={year}>
+                          {year}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  {/* </p> */}
+                </div>
               )}
             </div>
             <TableAll
