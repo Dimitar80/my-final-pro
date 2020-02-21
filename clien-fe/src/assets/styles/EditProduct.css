@@ -33,7 +33,8 @@
 }
 
 .epform-container {
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: flex;
   /* flex-wrap: wrap; */
   align-items: center; /* check*/
   justify-content: center; /*check*/
@@ -49,41 +50,174 @@
 /* .epform-container > * {
   flex: 1 0 300px;
 } */
+@media screen and (max-width: 1270px) {
+  .epform-container #epfpage {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+    height: 650px;
 
-@media screen and (max-width: 600px) {
+    width: 90%;
+  }
+  #epfpage input {
+    min-width: 0px;
+    width: 100%;
+  }
+  #epfpage #btnsEp {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+  }
+  #btnsEp .epcl-button {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+  #btnsEp .eps-button {
+    margin-top: 20px;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 990px) {
   .epform-container {
-    /* display: flex; */
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    height: 1300px;
-    width: 73%;
-    clear: both;
-    align-items: flex-start;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    height: 800px;
+    width: 57%;
+    /* clear: both; */
+    /* align-items: flex-start; */
     /* flex-flow: row wrap; */
   }
-  .eptextfield {
+
+  #epfpage input {
+    min-width: 0px;
     width: 100%;
-    /* flex: 0 0 66.66667%;
-    max-width: 66.66667%; */
   }
+
+  /* #epfpage .eptextfield {
+    min-width: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 2;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  } */
   /* #epfpage {
     flex-flow: row wrap;
   } */
-  #epfpage {
+  .epform-container #epfpage {
     /* display: flex; */
+    /* padding: 0px 50px 0px 50px; */
+    width: 100%;
+    height: 650px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .epform-container #ep-right-page {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  #epfpage #btnsEp {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+  }
+  #btnsEp .epcl-button {
+    margin: 20px 0px 10px 0px;
     width: 100%;
   }
-  #ep-right-page {
+  #btnsEp .eps-button {
+    margin-top: 20px;
     width: 100%;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  /* .epform-container {
+    flex-direction: column;
+  } */
+  .epform-container #epfpage {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+    height: 650px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 90%;
+  }
+  .epform-container #ep-right-page {
+    width: 90%;
+    height: 150px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  #epfpage input {
+    /* min-width: 0px; */
+    width: 100%;
+  }
+  #epfpage #btnsEp {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+  }
+  #btnsEp .epcl-button {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+  #btnsEp .eps-button {
+    margin-top: 20px;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .epform-container {
+    /* flex-direction: column; */
+    width: 90%;
+  }
+  .epform-container #epfpage {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+    height: 650px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 90%;
+  }
+  #epfpage input {
+    /* min-width: 0px; */
+    width: 100%;
+  }
+  #epfpage #btnsEp {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+  }
+  #btnsEp .epcl-button {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+  #btnsEp .eps-button {
+    margin-top: 20px;
+    width: 100%;
+    margin-right: 0px;
   }
 }
 
 #epfpage {
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   float: left;
   align-items: center;
-  justify-content: flex-start; /*flex-start*/
+  justify-content: flex-start;
   width: 53%;
   height: 100%;
   background-color: #fff;
@@ -123,14 +257,17 @@
 }
 
 #btnsEp {
+  /* display: inline-flex; */
   display: flex;
-  flex-direction: row;
-  /* align-items: center;
-    justify-content: center;
-    align-content: center; */
+  flex-wrap: wrap;
+  border: 2px solid royalblue;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* align-content: center; */
 }
 
-.ep-button {
+.eps-button {
   width: 180px;
   height: 50px;
   font-size: 15px;

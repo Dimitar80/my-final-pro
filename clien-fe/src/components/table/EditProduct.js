@@ -177,20 +177,23 @@ class EditProduct extends React.Component {
                       />
                     </p>
                     <div id="btnsEp">
-                      <button
-                        type="button"
-                        className="ep-button"
-                        onClick={this.editProduct}
-                      >
-                        SAVE
-                      </button>
-
-                      <Link
-                        to="/products"
-                        style={{ width: "0px", height: "0px" }}
-                      >
-                        <button className="epcl-button">CLOSE</button>
-                      </Link>
+                      <div>
+                        <button
+                          type="button"
+                          className="eps-button"
+                          onClick={this.editProduct}
+                        >
+                          SAVE
+                        </button>
+                      </div>
+                      <div>
+                        <Link
+                          to="/products"
+                          style={{ width: "0px", height: "0px" }}
+                        >
+                          <button className="epcl-button">CLOSE</button>
+                        </Link>
+                      </div>
                     </div>
                   </form>
                 ) : (

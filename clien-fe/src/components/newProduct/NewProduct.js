@@ -81,8 +81,8 @@ class NewProduct extends React.Component {
             <div id="npmaintitle">
               <h1>New Product</h1>
             </div>
-            <div className="form-container">
-              <div id="fpage">
+            <div className="np-form-container">
+              <div id="np-fpage">
                 <form>
                   <p className="input-container">
                     <label className="nplabel">Product Name</label>
@@ -145,7 +145,7 @@ class NewProduct extends React.Component {
                   </div>
                 </form>
               </div>
-              <div id="right-page">
+              <div id="np-right-page">
                 <p id="simbol">
                   <i className="fas fa-plus-circle" />
                 </p>

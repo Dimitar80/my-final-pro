@@ -200,7 +200,7 @@ class UpdateUser extends React.Component {
                         defaultValue={this.state.usdata[0].country}
                       />
                     </p>
-                    <div id="btnsEp">
+                    <div id="btnsEu">
                       <button
                         type="button"
                         className="eu-button"

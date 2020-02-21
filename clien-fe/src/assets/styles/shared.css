@@ -34,8 +34,10 @@ body {
   /* width: 420px; */
 }
 
+/* width: 340px; */
 .input-container {
-  width: 340px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0px;
 }
 
