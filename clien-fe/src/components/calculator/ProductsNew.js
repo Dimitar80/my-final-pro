@@ -24,7 +24,7 @@ class ProductsNew extends React.Component {
   getProducts = () => {
     this.setState({ loading: true });
     axios
-      .get(`http://127.0.0.1:8082/api/v1/products/?sort=purchaseDate:desc`, {
+      .get(`/api/v1/products/?sort=purchaseDate:desc`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       })
       .then(res => {
@@ -44,7 +44,7 @@ class ProductsNew extends React.Component {
   getSortedProducts = () => {
     this.setState({ loading: true });
     axios
-      .get(`http://127.0.0.1:8082/api/v1/products/?sort=${this.state.sort}`, {
+      .get(`/api/v1/products/?sort=${this.state.sort}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       })
       .then(res => {

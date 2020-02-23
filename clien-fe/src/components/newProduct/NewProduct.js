@@ -38,7 +38,7 @@ class NewProduct extends React.Component {
     } else {
       axios
         .post(
-          "http://127.0.0.1:8082/api/v1/products/",
+          "/api/v1/products/",
           {
             productName: this.state.productName,
             productType: this.state.productType,
