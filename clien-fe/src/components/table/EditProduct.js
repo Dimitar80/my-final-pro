@@ -22,9 +22,12 @@ class EditProduct extends React.Component {
   GetProductById = () => {
     this.setState({ loading: true });
     axios
-      .get("/api/v1/products/" + this.props.match.params.id, {
-        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
-      })
+      .get(
+        "http://127.0.0.1:8082/api/v1/products/" + this.props.match.params.id,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
+        }
+      )
       .then(res => {
         const ep = res.data;
         console.log(ep);
@@ -64,7 +67,7 @@ class EditProduct extends React.Component {
     } else {
       axios
         .put(
-          "/api/v1/products/" + this.props.match.params.id,
+          "http://127.0.0.1:8082/api/v1/products/" + this.props.match.params.id,
           {
             productName:
               this.state.productName || this.state.edata[0].productName,

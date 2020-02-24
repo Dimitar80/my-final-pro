@@ -34,7 +34,7 @@ class TableAll extends React.Component {
 
   deleteRow = id => {
     axios
-      .delete("/api/v1/products/" + id, {
+      .delete("http://127.0.0.1:8081/api/v1/products/" + id, {
         headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       })
       .then(res => {

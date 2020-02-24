@@ -38,7 +38,7 @@ class NewProduct extends React.Component {
     } else {
       axios
         .post(
-          "/api/v1/products/",
+          "http://127.0.0.1:8082/api/v1/products/",
           {
             productName: this.state.productName,
             productType: this.state.productType,
@@ -131,17 +131,23 @@ class NewProduct extends React.Component {
                     />
                   </p>
                   <div id="btnsNp">
-                    <button
-                      type="button"
-                      className="cp-button"
-                      onClick={this.createProduct}
-                    >
-                      CREATE PRODUCT
-                    </button>
-
-                    <Link to="products" style={{ width: "0px", height: "0px" }}>
-                      <button className="cl-button">CLOSE</button>
-                    </Link>
+                    <div id="createP">
+                      <button
+                        type="button"
+                        className="cp-button"
+                        onClick={this.createProduct}
+                      >
+                        CREATE PRODUCT
+                      </button>
+                    </div>
+                    <div id="closeNp">
+                      <Link
+                        to="products"
+                        style={{ width: "0px", height: "0px" }}
+                      >
+                        <button className="cl-button">CLOSE</button>
+                      </Link>
+                    </div>
                   </div>
                 </form>
               </div>

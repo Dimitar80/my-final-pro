@@ -24,7 +24,7 @@ class ProLogin extends React.Component {
 
   usersList = () => {
     axios
-      .get("/api/v1/auth/userslist")
+      .get("http://127.0.0.1:8081/api/v1/auth/userslist")
       .then(res => {
         this.setState({ userlist: res.data /*loading: false*/ }, () => {
           console.log(this.state.userlist);
@@ -86,7 +86,7 @@ class ProLogin extends React.Component {
       // this.state.password != null
     ) {
       axios
-        .post("/api/v1/auth/login", {
+        .post("http://127.0.0.1:8081/api/v1/auth/login", {
           email: this.state.email,
           password: this.state.password
         })

@@ -53,7 +53,7 @@ class Register extends React.Component {
     ) {
       event.preventDefault();
       axios
-        .post("/api/v1/auth/register", {
+        .post("http://127.0.0.1:8081/api/v1/auth/register", {
           first_name: this.state.first_name,
           last_name: this.state.last_name,
           email: this.state.email,
@@ -66,7 +66,7 @@ class Register extends React.Component {
         .then(res => {
           console.log(res.data);
           axios
-            .post("/api/v1/auth/login", {
+            .post("http://127.0.0.1:8081/api/v1/auth/login", {
               email: this.state.email,
               password: this.state.password
             })

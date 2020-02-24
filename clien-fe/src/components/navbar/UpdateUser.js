@@ -29,7 +29,7 @@ class UpdateUser extends React.Component {
     this.setState({ loading: true });
     axios
       .get(
-        "/api/v1/auth/" + this.props.match.params.id,
+        "http://127.0.0.1:8081/api/v1/auth/" + this.props.match.params.id,
         /*.get(`/api/v1/auth/${localStorage.getItem("_id")}`,*/ {
           headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
         }
@@ -72,7 +72,7 @@ class UpdateUser extends React.Component {
     } else {
       axios
         .put(
-          "/api/v1/auth/" +
+          "http://127.0.0.1:8081/api/v1/auth/" +
             /*this.state.edata[0]._id*/ this.props.match.params.id,
           {
             first_name:

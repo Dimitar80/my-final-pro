@@ -20,7 +20,7 @@ class DeleteUser extends React.Component {
     const userot = this.props.fullName;
     console.log(userot);
     axios
-      .delete("/api/v1/products/user/" + id, {
+      .delete("http://127.0.0.1:8081/api/v1/products/user/" + id, {
         headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       })
       .then(res => {
@@ -30,7 +30,7 @@ class DeleteUser extends React.Component {
         // this.props.fgetProducts(); // Povik do baza-nov call!!!???
         console.log(res.data);
         axios
-          .delete("/api/v1/auth/" + id, {
+          .delete("http://127.0.0.1:8081/api/v1/auth/" + id, {
             headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
           })
           .then(res => {
