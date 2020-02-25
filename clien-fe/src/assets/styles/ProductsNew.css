@@ -14,6 +14,12 @@
   width: 97%;
   height: calc(100% - 170px);
 }
+@media screen and (max-width: 426px) {
+  .prmain-container {
+    width: 97%;
+    height: calc(100% - 280px);
+  }
+}
 
 /*Vidi kaj marginot*/
 #pmaintitle {

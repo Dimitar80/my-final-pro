@@ -201,23 +201,27 @@ class UpdateUser extends React.Component {
                       />
                     </p>
                     <div id="btnsEu">
-                      <button
-                        type="button"
-                        className="eu-button"
-                        onClick={this.editUser}
-                      >
-                        SAVE
-                      </button>
-                      <Link
-                        to="/products"
-                        style={{ width: "0px", height: "0px" }}
-                      >
-                        <button className="eu-cl-button">CLOSE</button>
-                      </Link>
+                      <div id="us-save-close">
+                        <button
+                          type="button"
+                          className="eu-button"
+                          onClick={this.editUser}
+                        >
+                          SAVE
+                        </button>
+                        <Link
+                          to="/products"
+                          style={{ width: "0px", height: "0px" }}
+                        >
+                          <button className="eu-cl-button">CLOSE</button>
+                        </Link>
+                      </div>
+                      <div>
+                        <button id="delete-user-btn" onClick={this.delOn}>
+                          DELETE USER
+                        </button>
+                      </div>
                     </div>
-                    <button id="delete-user-btn" onClick={this.delOn}>
-                      DELETE USER
-                    </button>
                   </div>
                 ) : (
                   <h2>Loading...</h2>

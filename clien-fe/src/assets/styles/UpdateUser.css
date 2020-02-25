@@ -36,14 +36,181 @@
   display: flex;
   align-items: center; /* check*/
   justify-content: center; /*check*/
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   width: 73%;
   height: 710px;
   margin: 0 auto 40px 5%;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: red;
   /* height: 450px; */
   /* padding: 40px 120px 40px 40px; */
+}
+
+@media screen and (max-width: 1024px) {
+  .user-form-container {
+    width: 90%;
+    height: 800px;
+  }
+  .user-form-container #user-fpage {
+    display: flex;
+    padding: 0px 50px 0px 50px;
+    width: 55%;
+  }
+  .user-form-container #user-right-page {
+    width: 45%;
+  }
+  .user-form-container #user-fpage input {
+    min-width: 0px;
+    width: 100%;
+  }
+  /* #user-fpage #btnsEu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  } */
+  #user-fpage #us-save-close {
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+    /* flex-wrap: wrap; */
+  }
+  #user-fpage .eu-button {
+    margin: 30px 0px 10px 0px;
+    width: 100%;
+  }
+  #user-fpage .eu-cl-button {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+  #user-fpage #delete-user-btn {
+    margin: 20px 0px 10px 0px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-form-container {
+    display: flex;
+    height: 800px;
+    width: 90%;
+  }
+  .user-form-container #user-fpage {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+    height: 100%;
+    width: 63%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  .user-form-container #user-right-page {
+    width: 37%;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .user-form-container #user-fpage input {
+    min-width: 0px;
+    width: 100%;
+  }
+  #user-fpage #us-save-close {
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+    /* flex-wrap: wrap; */
+  }
+  /* #user-fpage #btnsEp {
+    display: flex;
+    flex-direction: column;
+  } */
+  #user-fpage .eu-button {
+    margin: 30px 0px 10px 0px;
+    width: 100%;
+  }
+  #user-fpage .eu-cl-button {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+  #user-fpage #delete-user-btn {
+    margin: 20px 0px 10px 0px;
+    /* width: 100%; */
+    width: 323px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #user-main-container {
+    height: calc(100% - 280px);
+  }
+  .user-form-container {
+    display: flex;
+    flex-direction: column;
+    height: 950px;
+    width: 90%;
+  }
+  .user-form-container #user-fpage {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+    height: 800px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+  }
+  .user-form-container #user-right-page {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+  .user-form-container #user-fpage input {
+    min-width: 0px;
+    width: 100%;
+  }
+  #user-fpage #us-save-close {
+    /* display: flex; */
+    flex-direction: column;
+    width: 100%;
+    /* flex-wrap: wrap; */
+  }
+  /* #user-fpage #btnsEp {
+    display: flex;
+    flex-direction: column;
+  } */
+  #user-fpage .eu-button {
+    margin: 30px 0px 10px 0px;
+    width: 100%;
+  }
+  #user-fpage .eu-cl-button {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+  #user-fpage #delete-user-btn {
+    margin: 20px 0px 10px 0px;
+    /* width: 100%; */
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #user-fpage #delete-user-btn {
+    margin: 20px 0px 10px 0px;
+    /* width: 100%; */
+    width: 230px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #user-fpage #delete-user-btn {
+    margin: 20px 0px 10px 0px;
+    /* width: 100%; */
+    width: 180px;
+  }
 }
 
 #user-fpage {
@@ -85,11 +252,18 @@
 }
 
 #btnsEu {
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  flex-wrap: wrap;
+  width: 100%;
   /* align-items: center;
       justify-content: center;
       align-content: center; */
+}
+#us-save-close {
+  /* display: flex; */
+  width: 100%;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
 }
 
 .eu-button {
@@ -168,6 +342,7 @@
 
 #user-right-page #user-title {
   display: inline-block;
-  margin: 15px 0px 0px 0px;
+  text-align: center;
+  margin: 15px 10px 0px 10px;
   font-size: 18px;
 }

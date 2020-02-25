@@ -14,8 +14,6 @@
 #npmain-container {
   width: 97%;
   height: calc(100% - 170px);
-  /* padding-right: 120px; */
-  /* padding-left: 120px; */
 }
 
 #npmaintitle {
@@ -43,10 +41,9 @@
   margin: 0 auto 40px 5%;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: red;
   /* justify-content: space-between; */
   /* max-width: 600px; */
-  /* height: 450px; */
-  /* padding: 40px 120px 40px 40px; */
 }
 
 @media screen and (max-width: 1024px) {
@@ -267,7 +264,7 @@
   width: 47%;
   height: 100%;
   display: flex;
-  flex: 0 0 auto;
+  /* flex: 0 0 auto; */
   /* float: right; */
   flex-direction: column;
   align-items: center;
@@ -281,14 +278,15 @@
   overflow-x: hidden;
 }
 
-#right-page #simbol {
+#np-right-page #simbol {
   display: inline-block;
   margin: 0px 0px 0px 0px;
   font-size: 40px;
 }
 
-#right-page #title {
+#np-right-page #title {
   display: inline-block;
-  margin: 15px 0px 0px 0px;
+  text-align: center;
+  margin: 15px 10px 0px 10px;
   font-size: 18px;
 }

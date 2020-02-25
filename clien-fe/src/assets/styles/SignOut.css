@@ -26,6 +26,14 @@
   border-radius: 5px;
   margin: 0px;
 }
+/* @media screen and (max-width: 426px) {
+  #so-dd-box {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    right: 75px;
+  }
+} */
 
 #so-text {
   display: flex;

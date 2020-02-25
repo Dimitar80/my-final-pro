@@ -63,7 +63,7 @@ class DeleteUser extends React.Component {
 
     return (
       <div id="du-back-screen">
-        <div id="user-delbox">
+        <div id="user-delBox">
           <div id="user-boxtext">
             <h2>Delete User</h2>
             <p>
@@ -76,7 +76,7 @@ class DeleteUser extends React.Component {
               Are you sure you want to continue?
             </p>
           </div>
-          <div id="delBox-buttons">
+          <div id="delBoxUser-buttons">
             <button id="cancel" onClick={this.props.clDelUser}>
               CANCEL
             </button>

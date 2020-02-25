@@ -17,6 +17,13 @@
   height: calc(100% - 170px);
 }
 
+@media screen and (max-width: 426px) {
+  .exmain-container {
+    width: 97%;
+    height: calc(100% - 280px);
+  }
+}
+
 #experiod {
   display: flex;
   width: 90%;

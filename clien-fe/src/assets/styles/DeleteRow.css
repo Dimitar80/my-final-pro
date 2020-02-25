@@ -80,3 +80,39 @@
   color: #fff;
   /* font-weight: 500; */
 }
+
+@media screen and (max-width: 375px) {
+  #delbox {
+    width: 350px;
+    height: 420px;
+  }
+  #boxtext {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    padding-bottom: 16px;
+  }
+  #delbox p {
+    margin: 0px auto 0px;
+    width: 250px;
+  }
+  #delbox h2 {
+    font-size: 19px;
+    color: #576574;
+    font-weight: bold;
+    margin: 20px 0px 10px 20px;
+  }
+  #delBox-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+  #delbox #cancel {
+    margin: 10px 0px 20px 0px;
+    width: 260px;
+  }
+  #delbox #delete {
+    margin: 0px 0px 0px 0px;
+    width: 260px;
+  }
+}

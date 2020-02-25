@@ -14,8 +14,6 @@
 #epmain-container {
   width: 97%;
   height: calc(100% - 170px);
-  /* padding-right: 120px; */
-  /* padding-left: 120px; */
 }
 
 #epmaintitle {
@@ -200,12 +198,7 @@
   display: inline-block;
 }
 
-/* input {
-    display: block;
-  } */
 .eptextfield {
-  /* width: 100%; */
-  /* flex: 0 1 100%; */
   width: 370px;
   height: 35px;
   font-size: 15px;
@@ -225,9 +218,6 @@
   flex-wrap: wrap;
   /* border: 2px solid royalblue; */
   /* flex-direction: row; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* align-content: center; */
 }
 
 .eps-button {
