@@ -20,7 +20,7 @@ class DeleteUser extends React.Component {
     const userot = this.props.fullName;
     console.log(userot);
     axios
-      .delete("http://127.0.0.1:8081/api/v1/products/user/" + id, {
+      .delete("http://127.0.0.1:8082/api/v1/products/user/" + id, {
         headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       })
       .then(res => {

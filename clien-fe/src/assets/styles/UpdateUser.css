@@ -42,9 +42,7 @@
   margin: 0 auto 40px 5%;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: red;
-  /* height: 450px; */
-  /* padding: 40px 120px 40px 40px; */
+  /* background-color: red; */
 }
 
 @media screen and (max-width: 1024px) {

@@ -70,7 +70,7 @@ class Navbar extends React.Component {
           </nav>
 
           <div id="user" className="dropdown">
-            <img src={UserImg} alt="profileimg" />
+            <img id="pic" src={UserImg} alt="profileimg" />
             <h3
               id="touch"
               className={
