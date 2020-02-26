@@ -99,7 +99,7 @@ body {
     flex-wrap: wrap;
     box-sizing: border-box;
     /* overflow-x: hidden; */
-    width: 280px;
+    width: 260px;
   }
   #prologin #email {
     /* display: flex; */
@@ -184,7 +184,7 @@ body {
     flex-wrap: wrap;
     box-sizing: border-box;
     /* overflow-x: hidden; */
-    width: 280px;
+    width: 260px;
   }
   #register .primary-button {
     width: 100%;
@@ -200,7 +200,7 @@ body {
   #register .reg-input-icons i {
     position: absolute;
     top: 292px;
-    left: 185px;
+    left: 165px;
   }
 }
 /* width: 340px; */

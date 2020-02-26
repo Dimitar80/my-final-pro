@@ -26,11 +26,11 @@
   border-radius: 5px;
   margin: 0px;
 }
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
   #so-dd-box {
     margin-top: 47px;
   }
-}
+} */
 
 #so-text {
   display: flex;

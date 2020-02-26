@@ -169,7 +169,7 @@
 @media screen and (max-width: 426px) {
   #expenses #saldo {
     font-size: 14px;
-    width: 700px;
+    width: 750px;
     height: 70px;
     color: #fff;
     background-color: rgba(83, 83, 83, 0.5);
@@ -181,12 +181,12 @@
 }
 @media screen and (max-width: 375px) {
   #expenses #saldo {
-    width: 750px;
+    width: 800px;
   }
 }
 @media screen and (max-width: 320px) {
   #expenses #saldo {
-    width: 800px;
+    width: 850px;
   }
 }
 #saldo {
