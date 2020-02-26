@@ -23,7 +23,7 @@ class Expenses extends React.Component {
     this.setState({ loading: true });
     // const url = this.formatUrl();
     axios
-      .get(`http://127.0.0.1:8082/api/v1/products/?sort=purchaseDate:desc`, {
+      .get(`/api/v1/products/?sort=purchaseDate:desc`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       })
       .then(res => {
@@ -91,7 +91,7 @@ class Expenses extends React.Component {
       this.setState({ loading: true });
       axios
         .get(
-          `http://127.0.0.1:8082/api/v1/products/?purcdate_from=
+          `/api/v1/products/?purcdate_from=
           ${fromYear}&purcdate_to=${toYear}&sort=purchaseDate:desc`,
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
@@ -156,7 +156,7 @@ class Expenses extends React.Component {
     this.setState({ loading: true });
     axios
       .get(
-        `http://127.0.0.1:8082/api/v1/products/?purcdate_from=
+        `/api/v1/products/?purcdate_from=
       ${OnlyfromYear}&purcdate_to=${OnlytoYear}&sort=purchaseDate:desc`,
         {
           headers: {
@@ -193,7 +193,7 @@ class Expenses extends React.Component {
       console.log("Getting data");
       axios
         .get(
-          `http://127.0.0.1:8082/api/v1/products/?purcdate_from=
+          `/api/v1/products/?purcdate_from=
           ${decCurrY}&purcdate_to=${janNextY}&sort=purchaseDate:desc`,
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
@@ -253,7 +253,7 @@ class Expenses extends React.Component {
       this.setState({ loading: true });
       axios
         .get(
-          `http://127.0.0.1:8082/api/v1/products/?purcdate_from=
+          `/api/v1/products/?purcdate_from=
           ${dateFromYM}&purcdate_to=${dateToYM}&sort=purchaseDate:desc`,
           {
             headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
