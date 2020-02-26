@@ -166,7 +166,29 @@
   height: 50px;
   padding: 5px 20px 5px 20px;
 }
-
+@media screen and (max-width: 426px) {
+  #expenses #saldo {
+    font-size: 14px;
+    width: 700px;
+    height: 70px;
+    color: #fff;
+    background-color: rgba(83, 83, 83, 0.5);
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  #expenses #saldo {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #expenses #saldo {
+    width: 800px;
+  }
+}
 #saldo {
   font-size: 14px;
   width: 100%;
