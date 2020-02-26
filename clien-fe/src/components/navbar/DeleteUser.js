@@ -30,7 +30,7 @@ class DeleteUser extends React.Component {
         // this.props.fgetProducts(); // Povik do baza-nov call!!!???
         console.log(res.data);
         axios
-          .delete("http://127.0.0.1:8081/api/v1/auth/" + id, {
+          .delete("/api/v1/auth/" + id, {
             headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
           })
           .then(res => {
