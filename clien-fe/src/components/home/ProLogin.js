@@ -50,22 +50,22 @@ class ProLogin extends React.Component {
 
   logIn = (/*event*/) => {
     // event.preventDefault();
-    for (let e = 0; e < this.state.userlist.length; e++) {
-      if (this.state.userlist[e].email !== this.state.email) {
-        // console.log("Existing user email - " + this.state.userlist[e].email);
-        // console.log("Entered email - " + this.state.email);
-        this.setState({
-          error: "Your e-mail is incorrect. Try again !",
-          exsUserData: null
-        });
-      }
-      // if (this.state.userlist[e].password === this.state.password) {
-      //   console.log(this.state.userlist[e].password);
-      //   console.log(this.state.password);
-      // } else {
-      //   console.log("Wrong Password!, try again");
-      // }
-    }
+    // for (let e = 0; e < this.state.userlist.length; e++) {
+    //   if (this.state.userlist[e].email !== this.state.email) {
+    //     // console.log("Existing user email - " + this.state.userlist[e].email);
+    //     // console.log("Entered email - " + this.state.email);
+    //     this.setState({
+    //       error: "Your e-mail is incorrect. Try again !",
+    //       exsUserData: null
+    //     });
+    //   }
+    //   // if (this.state.userlist[e].password === this.state.password) {
+    //   //   console.log(this.state.userlist[e].password);
+    //   //   console.log(this.state.password);
+    //   // } else {
+    //   //   console.log("Wrong Password!, try again");
+    //   // }
+    // }
     if (
       this.state.email === "" ||
       this.state.password === "" ||
