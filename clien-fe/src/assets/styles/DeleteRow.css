@@ -75,6 +75,8 @@
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.17);
   cursor: pointer;
 }
+
+/*Crven delete */
 #delbox #delete {
   /* background-color: #576574; */
   background-color: #d12525;
